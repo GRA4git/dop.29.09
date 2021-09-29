@@ -18,3 +18,15 @@ const people = [
     {name: 'Peter', age: 69}
 ];
 people.forEach(item => console.log(item));
+people.forEach(item => console.log(item.name));
+const children = people.filter((item) => item.age < 18);
+const oldPeople = people.filter((item) => item.age >= 18);
+const futurePeople = people.map((item) =>({age: item.age + 30}))
+const deadPeople = people.map((item) => {
+    if(item.age > 100) {
+        return { isDead: true }
+    }
+    if(item.age < 100) {
+        return {isDead: false}
+}
+})
