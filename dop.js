@@ -30,3 +30,7 @@ const deadPeople = people.map((item) => {
         return {isDead: false}
 }
 })
+const averageAge =
+  people.reduce((acc, val) => acc + val.age, 0) / people.length;
+
+console.log(averageAge);
